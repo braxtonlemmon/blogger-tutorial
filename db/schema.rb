@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_02_26_093247) do
-=======
-ActiveRecord::Schema.define(version: 2019_02_25_104328) do
->>>>>>> 2ecbb629bd2c0f28418306695ab87c42a56a635d
+ActiveRecord::Schema.define(version: 2019_02_26_102439) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -25,6 +21,16 @@ ActiveRecord::Schema.define(version: 2019_02_25_104328) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string "username", null: false
+    t.string "email", null: false
+    t.string "crypted_password", null: false
+    t.string "salt", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_authors_on_email", unique: true
   end
 
   create_table "comments", force: :cascade do |t|

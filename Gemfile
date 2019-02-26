@@ -28,6 +28,9 @@ gem 'jbuilder', '~> 2.5'
 #paperclip
 gem 'paperclip'
 
+#sorcery
+gem 'sorcery'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
