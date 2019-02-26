@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 <h1><%= @article.title %></h1>
+=======
+<h1><%= @article.title %><h1>
+>>>>>>> 2ecbb629bd2c0f28418306695ab87c42a56a635d
 <p>
     Tags:
     <% @article.tags.each do |tag| %>
         <%= link_to tag.name, tag_path(tag) %>
     <% end %>
 </p>
+<<<<<<< HEAD
 <p><%= image_tag @article.image.url(:medium) %></p>
+=======
+>>>>>>> 2ecbb629bd2c0f28418306695ab87c42a56a635d
 <p><%= @article.body %></p>
 <h3>Comments (<%= @article.comments.size %>)</h3>
 <%= render partial: 'articles/comment', collection: @article.comments %>
